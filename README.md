@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Sistema de Biblioteca
 
-## Getting Started
+Aplicação web para gerenciamento de uma biblioteca, permitindo cadastrar livros e leitores, controlar empréstimos e acompanhar as informações do acervo.
 
-First, run the development server:
+## 🚀 Tecnologias
+
+* Next.js
+* React
+* TypeScript
+* Prisma ORM
+* PostgreSQL
+* Supabase Storage
+* Tailwind CSS
+
+## ⚙️ Funcionalidades
+
+* Cadastro, edição e exclusão de livros
+* Cadastro e gerenciamento de leitores
+* Controle de empréstimos
+* Controle da quantidade de livros disponíveis
+* Upload de capas dos livros
+* Consulta das informações do acervo
+* Dashboard com informações da biblioteca
+
+## 📦 Instalação
+
+Clone o repositório:
+
+```bash
+git clone URL_DO_REPOSITORIO
+```
+
+Entre na pasta:
+
+```bash
+cd biblioteca
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Configure as variáveis de ambiente no arquivo `.env`:
+
+```env
+DATABASE_URL="sua_url_do_banco"
+```
+
+Depois, gere o Prisma Client:
+
+```bash
+npx prisma generate
+```
+
+Execute o projeto:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação estará disponível em:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗄️ Banco de dados
 
-## Learn More
+O projeto utiliza **PostgreSQL** para armazenar os dados da aplicação e **Prisma ORM** para comunicação com o banco.
 
-To learn more about Next.js, take a look at the following resources:
+As principais entidades são:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Livro**
+* **Leitor**
+* **Empréstimo**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Estrutura básica
 
-## Deploy on Vercel
+```text
+biblioteca/
+├── app/
+├── components/
+├── prisma/
+├── public/
+├── .env
+├── package.json
+└── README.md
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 Status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🚧 Projeto em desenvolvimento.
