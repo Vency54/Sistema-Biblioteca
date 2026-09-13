@@ -1,7 +1,8 @@
 import { getLivros } from "@/type/Livro";
 import styles from "./page.module.css";
 
-import Modal from "@/components/modal";
+import FormularioLivro from "@/components/FormularioLivro";
+import Link from "next/link";
 
 export default async function SobreLivro({
   params,
@@ -38,7 +39,7 @@ export default async function SobreLivro({
       </div>
       <p className="pt-11">{book.ISBN}</p>
       <div className={styles.Editar}>
-        <Modal livro={book} />
+        <Link href={`/livros/${book.ISBN}/editar`}>Editar</Link>
       </div>
     </article>
   ) : (

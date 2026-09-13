@@ -11,6 +11,14 @@ export type Emprestimo = {
   Situacao: Situacoes;
 };
 
+export type EmprestimoDados = {
+  ISBN: string;
+  leitorId: string;
+  DataEmprestimo: string;
+  DataDevolucao: string;
+  Situacao: Situacoes;
+};
+
 export async function getEmprestimo() {
   const emprestimos = await db.orm.public.Emprestimo.all();
 
@@ -44,6 +52,30 @@ export async function addEmprestimo(loan: Emprestimo) {
     DataDevolucao: loan.DataDevolucao,
     Situacao: loan.Situacao,
   });
+}
+
+export async function alterarEmprestimo(
+  IdEmprestimoAntigo: string,
+  emprestimo: EmprestimoDados,
+) {
+  const emprestimoAntigo = await db.orm.public.Emprestimo.where({
+    IdEmprestimo: IdEmprestimoAntigo,
+  }).first();
+
+  if (!IdEmprestimoAntigo) {
+    return getEmprestimo();
+  }
+
+  await db.orm.public.Emprestimo.where({
+    IdEmprestimo: IdEmprestimoAntigo,
+  }).update({
+    ISBN: emprestimo.ISBN,
+    leitorId: emprestimo.leitorId,
+    DataEmprestimo: emprestimo.DataEmprestimo,
+    DataDevolucao: emprestimo.DataDevolucao,
+    Situacao: emprestimo.Situacao,
+  });
+  getEmprestimo();
 }
 
 export async function alterarSit(IdEmprestimo: string, situacao: Situacoes) {

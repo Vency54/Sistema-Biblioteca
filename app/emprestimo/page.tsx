@@ -4,7 +4,6 @@ import styles from "./emprestimo.module.css";
 import Situacao from "@/components/SelectSituation";
 import BotaoRemover from "@/components/BotaoRemover";
 import RemoverEmprestimo from "@/actions/RemoverEmprestimo";
-import ModalNovoEmprestimo from "@/components/modalEmprestimo";
 export default async function Emprestimo() {
   const emprestimo = await getEmprestimo();
 
@@ -13,7 +12,9 @@ export default async function Emprestimo() {
       <div className={styles.rodape}>
         <h1>Lista de Emprestimos</h1>
         <div className={styles.Adicionar}>
-          <ModalNovoEmprestimo />
+          <Link className={styles.TextoAdd} href={"/emprestimo/novo"}>
+            Novo Emprestimo
+          </Link>
         </div>
       </div>
       <div className="overflow-x-auto">
@@ -65,6 +66,11 @@ export default async function Emprestimo() {
                     situacao={emprestimos.Situacao}
                   />
                 </td>
+                <th>
+                  <Link href={`/emprestimo/${emprestimos.IdEmprestimo}`}>
+                    Editar
+                  </Link>
+                </th>
                 <th>
                   <BotaoRemover
                     id={emprestimos.IdEmprestimo}

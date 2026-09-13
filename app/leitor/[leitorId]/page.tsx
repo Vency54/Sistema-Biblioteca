@@ -73,6 +73,9 @@ export default async function SobreLeitor({
           </table>
         </div>
       </div>
+      <div className={styles.Editar}>
+        <Link href={`/leitor/${leitor.IdLeitor}/editar`}>Editar</Link>
+      </div>
       <p className="pt-11">{leitor.IdLeitor}</p>
     </article>
   ) : (

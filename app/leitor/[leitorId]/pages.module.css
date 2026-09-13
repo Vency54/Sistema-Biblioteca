@@ -71,3 +71,11 @@
   /* Cria uma sombra suave ao redor da caixa */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
+.Editar {
+  border: 1px solid #e2e8f0;
+  background-color: yellow;
+  height: 100%;
+  padding: 5px;
+  border-radius: 12px;
+}

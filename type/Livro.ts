@@ -41,7 +41,7 @@ export async function alterarLivro(ISBNAntigo: string, book: Livro) {
     return getLivros();
   }
 
-  db.orm.public.Livro.where({ ISBN: ISBNAntigo }).update({
+  await db.orm.public.Livro.where({ ISBN: ISBNAntigo }).update({
     ISBN: book.ISBN,
     Nome: book.Nome,
     Autor: book.Autor,
