@@ -1,0 +1,42 @@
+model Livro {
+    ISBN        String       @id
+    Nome        String
+    Autor       String
+    Ano         String
+    Quantidade  String
+    Imagem      String?
+    Genero      String
+    Sinopse     String
+    emprestimos Emprestimo[]
+}
+
+model Leitor {
+    IdLeitor    String       @id
+    Cpf         String       @unique
+    Nome        String
+    Idade       String
+    Email       String
+    Telefone    String
+    Imagem      String?
+    emprestimos Emprestimo[]
+}
+
+enum Situacoes {
+    RESERVADO
+    EMPRESTADO
+    DEVOLVIDO
+    ATRASADO
+}
+
+model Emprestimo {
+    IdEmprestimo String @id
+    ISBN         String
+    leitorId     String
+
+    DataEmprestimo String
+    DataDevolucao  String
+    Situacao       Situacoes
+
+    livro  Livro  @relation(fields: [ISBN], references: [ISBN])
+    leitor Leitor @relation(fields: [leitorId], references: [IdLeitor])
+}

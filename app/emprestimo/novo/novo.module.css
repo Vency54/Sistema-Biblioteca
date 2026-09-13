@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  border: 1px solid #e2e8f0; /* Cria uma borda fina */
+  border-radius: 12px; /* Arredonda os cantos */
+  width: 335px; /* Define a largura */
+  height: 100px; /* Define a altura mínima */
+  padding: 20px; /* Espaçamento entre o conteúdo e a borda */
+  background-color: white; /* Fundo branco */
+  gap: 25px;
+
+  /* Cria uma sombra suave ao redor do card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Faz as mudanças de transformação e sombra ficarem suaves */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 10px;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+}
+
+.estoque {
+  display: flex;
+  flex-direction: column;
+}
+
+.estoque p {
+  font-size: 12px;
+  font-weight: bold;
+}
