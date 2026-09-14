@@ -27,7 +27,7 @@ Aplicação web para gerenciamento de uma biblioteca, permitindo cadastrar livro
 Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/Vency54/Sistema-Biblioteca.git
 ```
 
 Entre na pasta:
