@@ -1,8 +1,7 @@
 "use server";
-import Image from "next/image";
 import styles from "./paginaInicial.module.css";
 import { getLivros } from "@/type/Livro";
-import { getLeitor, leitor } from "@/type/Leitores";
+import { getLeitor } from "@/type/Leitores";
 import { getEmprestimo } from "@/type/Emprestimo";
 import Grafico from "@/components/graficoSituacao";
 import Contador from "@/components/ContadorTabelas";

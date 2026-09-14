@@ -1,6 +1,5 @@
 import FormularioLeitor from "@/components/FormularioLeitor";
 import { getLeitor } from "@/type/Leitores";
-import { getLivros } from "@/type/Livro";
 
 export default async function EditarLivro({
   params,

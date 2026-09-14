@@ -12,7 +12,7 @@ type Livro = {
   Genero: string;
   Sinopse: string;
   Quantidade: string;
-  Imagem?: string;
+  Imagem?: string | null;
 };
 
 type Props = {

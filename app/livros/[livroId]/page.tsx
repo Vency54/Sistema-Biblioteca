@@ -24,7 +24,7 @@ export default async function SobreLivro({
     <article className="mmax-w-4xl mx-auto p-4 flex  gap-4">
       <div className={styles.apresentacao}>
         <div className={styles.card}>
-          <img src={book.Imagem} alt="Livro" />
+          <img src={book.Imagem ?? ""} alt="Livro" />
         </div>
         <p>Em estoque: {book.Quantidade}</p>
       </div>

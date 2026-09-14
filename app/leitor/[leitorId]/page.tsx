@@ -25,7 +25,7 @@ export default async function SobreLeitor({
     <article className="max-w-4xl mx-auto p-4 flex  gap-4">
       <div className={styles.apresentacao}>
         <div className={styles.card}>
-          <img src={leitor.Imagem} alt="Livro" />
+          <img src={leitor.Imagem ?? ""} alt="Livro" />
         </div>
       </div>
       <div className={styles.titulo}>

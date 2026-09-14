@@ -4,6 +4,9 @@ import Link from "next/link";
 import styles from "./livros.module.css";
 import RemoverLivro from "@/actions/RemoverLivro";
 import BotaoRemover from "@/components/BotaoRemover";
+
+export const dynamic = "force-dynamic";
+
 export default async function Livros() {
   const book = await getLivros();
 

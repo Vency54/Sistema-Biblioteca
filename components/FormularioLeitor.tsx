@@ -1,10 +1,7 @@
 "use client";
 
-import CriarLivro from "@/actions/criarLivro";
-import AlterarLivro from "@/actions/alterarLivro";
 import { useActionState, useState } from "react";
 import { Emprestimo } from "@/type/Emprestimo";
-import { alterarLivro } from "@/type/Livro";
 import CriarLeitor from "@/actions/criarLeitor";
 import AlterarLeitor from "@/actions/AlterarLeitor";
 
@@ -15,8 +12,8 @@ type Leitor = {
   Idade: string;
   Email: string;
   Telefone: string;
-  Imagem?: string;
-  emprestimos: Emprestimo[];
+  Imagem?: string | null;
+  emprestimos?: Emprestimo[];
 };
 
 type Props = {

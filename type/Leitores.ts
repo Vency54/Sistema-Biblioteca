@@ -8,8 +8,8 @@ export type Leitor = {
   Idade: string;
   Email: string;
   Telefone: string;
-  Imagem?: string;
-  emprestimos: Emprestimo[];
+  Imagem?: string | null;
+  emprestimos?: Emprestimo[];
 };
 
 export type LeitorDados = {
@@ -19,7 +19,7 @@ export type LeitorDados = {
   Idade: string;
   Email: string;
   Telefone: string;
-  Imagem?: string;
+  Imagem?: string | null;
 };
 
 export async function getLeitor() {
@@ -43,7 +43,7 @@ export async function alterarLeitor(Idantigo: string, leitor: LeitorDados) {
     IdLeitor: Idantigo,
   }).first();
 
-  if (!Idantigo) {
+  if (!leitorAntigo) {
     return getLeitor();
   }
 

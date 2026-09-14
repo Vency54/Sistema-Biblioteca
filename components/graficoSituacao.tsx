@@ -4,7 +4,7 @@
 
 // Importa o tipo Emprestimos do seu projeto.
 // Ele define a estrutura de cada empréstimo.
-import { Emprestimos } from "@/type/Emprestimo";
+import { Emprestimo } from "@/type/Emprestimo";
 
 // Importa os componentes necessários da biblioteca Recharts
 // para construir o gráfico de barras.
@@ -21,7 +21,7 @@ import {
 // Define as propriedades (props) que o componente irá receber.
 type Props = {
   // Recebe um array contendo todos os empréstimos.
-  emprestimo: Emprestimos[];
+  emprestimo: Emprestimo[];
 };
 
 // Componente responsável por criar o gráfico de situação dos empréstimos.

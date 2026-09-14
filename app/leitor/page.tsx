@@ -3,6 +3,9 @@ import Link from "next/link";
 import styles from "./leitores.module.css";
 import BotaoRemover from "@/components/BotaoRemover";
 import RemoverLeitor from "@/actions/RemoverLeitor";
+
+export const dynamic = "force-dynamic";
+
 export default async function Leitor() {
   const leitor = await getLeitor();
 
@@ -38,7 +41,7 @@ export default async function Leitor() {
                     <div className="avatar">
                       <div className="mask mask-squircle w-12 h-16 shrink-0">
                         <img
-                          src={leitores.Imagem}
+                          src={leitores.Imagem ?? ""}
                           alt="Leitor"
                           className="h-full w-full object-cover"
                         />

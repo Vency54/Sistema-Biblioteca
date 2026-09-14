@@ -8,7 +8,7 @@ export type Livro = {
   ISBN: string;
   Ano: string;
   Quantidade: string;
-  Imagem?: string;
+  Imagem?: string | null;
   Genero: string;
   Sinopse: string;
 };

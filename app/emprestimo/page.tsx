@@ -4,6 +4,9 @@ import styles from "./emprestimo.module.css";
 import Situacao from "@/components/SelectSituation";
 import BotaoRemover from "@/components/BotaoRemover";
 import RemoverEmprestimo from "@/actions/RemoverEmprestimo";
+
+export const dynamic = "force-dynamic";
+
 export default async function Emprestimo() {
   const emprestimo = await getEmprestimo();
 
