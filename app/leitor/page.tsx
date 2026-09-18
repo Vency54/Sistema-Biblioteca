@@ -21,7 +21,6 @@ export default async function Leitor() {
       </div>
       <div className="overflow-x-auto">
         <table className="table border-none border-separate border-spacing-x-6 border-spacing-y-6">
-          {/* head */}
           <thead>
             <tr>
               <th>Leitor</th>
@@ -31,8 +30,6 @@ export default async function Leitor() {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-
             {leitor.map((leitores) => (
               <tr key={leitores.IdLeitor}>
                 <td>

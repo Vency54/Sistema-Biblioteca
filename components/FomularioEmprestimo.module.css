@@ -1,17 +1,13 @@
 .card {
   display: flex;
-  border: 1px solid #e2e8f0; /* Cria uma borda fina */
-  border-radius: 12px; /* Arredonda os cantos */
-  width: 335px; /* Define a largura */
-  height: 100px; /* Define a altura mínima */
-  padding: 20px; /* Espaçamento entre o conteúdo e a borda */
-  background-color: white; /* Fundo branco */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  width: 335px;
+  height: 100px;
+  padding: 20px;
+  background-color: white;
   gap: 25px;
-
-  /* Cria uma sombra suave ao redor do card */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-  /* Faz as mudanças de transformação e sombra ficarem suaves */
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;

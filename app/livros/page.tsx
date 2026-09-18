@@ -1,5 +1,5 @@
 import Disponivel from "@/components/numberbox";
-import { getLivros, removerLivro } from "@/type/Livro";
+import { getLivros } from "@/type/Livro";
 import Link from "next/link";
 import styles from "./livros.module.css";
 import RemoverLivro from "@/actions/RemoverLivro";
@@ -22,7 +22,6 @@ export default async function Livros() {
       </div>
       <div className="overflow-x-auto">
         <table className="table border-none border-separate border-spacing-x-6 border-spacing-y-6">
-          {/* head */}
           <thead>
             <tr>
               <th>Livro</th>
@@ -31,8 +30,6 @@ export default async function Livros() {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-
             {book.map((books) => (
               <tr key={books.ISBN}>
                 <td>

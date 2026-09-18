@@ -8,18 +8,15 @@ export default async function SobreLeitor({
 }: {
   params: { leitorId: string };
 }) {
-  //pega a nova informação
   const readers = await getLeitor();
   const emprestimo = await getEmprestimo();
 
   const { leitorId } = await params;
 
   console.log(leitorId, readers);
-  //encontra a skill com id
   const leitor = readers.find((l) => l.IdLeitor === leitorId);
   const emprest = emprestimo.filter((l) => l.leitorId === leitorId);
 
-  //retornamos o objeto renderizado
   console.log("leitor Detail Page . leitor found: ", leitor);
   return leitor ? (
     <article className="max-w-4xl mx-auto p-4 flex  gap-4">

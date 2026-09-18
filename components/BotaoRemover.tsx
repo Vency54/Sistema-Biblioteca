@@ -1,7 +1,5 @@
 "use client";
 
-import RemoverLivro from "@/actions/RemoverLivro";
-
 type Parametros = {
   id: string;
   onClick: (id: string) => void;

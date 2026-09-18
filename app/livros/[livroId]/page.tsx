@@ -1,7 +1,6 @@
 import { getLivros } from "@/type/Livro";
 import styles from "./page.module.css";
 
-import FormularioLivro from "@/components/FormularioLivro";
 import Link from "next/link";
 
 export default async function SobreLivro({
@@ -9,16 +8,13 @@ export default async function SobreLivro({
 }: {
   params: { livroId: string };
 }) {
-  //pega a nova informação
   const books = await getLivros();
 
   const { livroId } = await params;
 
   console.log(livroId, books);
-  //encontra a skill com id
   const book = books.find((livreto) => livreto.ISBN === livroId);
 
-  //retornamos o objeto renderizado
   console.log("Books Detail Page . Book found: ", book);
   return book ? (
     <article className="mmax-w-4xl mx-auto p-4 flex  gap-4">

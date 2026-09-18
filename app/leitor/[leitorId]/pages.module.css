@@ -1,36 +1,27 @@
-/* Container principal da página */
 .container {
-  display: flex; /* Coloca os elementos lado a lado */
-  gap: 30px; /* Espaço entre os elementos */
-  padding: 40px; /* Espaçamento interno */
-  align-items: flex-start; /* Alinha os elementos pelo topo */
-  background-color: #f5f7fa; /* Cor de fundo da página */
-  min-height: 100vh; /* Ocupa no mínimo toda a altura da tela */
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  align-items: flex-start;
+  background-color: #f5f7fa;
+  min-height: 100vh;
 }
 
-/* Card lateral */
 .card {
-  border: 1px solid #e2e8f0; /* Cria uma borda fina */
-  border-radius: 12px; /* Arredonda os cantos */
-  width: 180px; /* Define a largura */
-  min-height: 200px; /* Define a altura mínima */
-  padding: 20px; /* Espaçamento entre o conteúdo e a borda */
-  background-color: white; /* Fundo branco */
-
-  /* Cria uma sombra suave ao redor do card */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  width: 180px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-  /* Faz as mudanças de transformação e sombra ficarem suaves */
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-/* Efeito aplicado quando o mouse passa sobre o card */
 .card:hover {
-  transform: translateY(-4px); /* Move o card 4px para cima */
-
-  /* Aumenta a sombra quando o mouse está sobre o card */
+  transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
@@ -38,7 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  flex: 1; /* Faz essa área ocupar o espaço disponível */
+  flex: 1;
 }
 
 .titulo {
@@ -50,14 +41,14 @@
 .titulo h1 {
   font-size: 30px;
   font-weight: 700;
-  margin: 0; /* Remove a margem padrão do h1 */
-  color: #1e293b; /* Cor do título */
+  margin: 0;
+  color: #1e293b;
 }
 
 .titulo p {
   font-size: 16px;
-  margin: 0; /* Remove a margem padrão do parágrafo */
-  color: #64748b; /* Cor acinzentada para o subtítulo */
+  margin: 0;
+  color: #64748b;
 }
 
 .caixa {
@@ -66,9 +57,7 @@
   width: 500px;
   height: 200px;
   padding: 25px;
-  background-color: white; /* Fundo branco */
-
-  /* Cria uma sombra suave ao redor da caixa */
+  background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
