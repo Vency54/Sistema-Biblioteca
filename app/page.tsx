@@ -1,4 +1,3 @@
-"use server";
 import styles from "./paginaInicial.module.css";
 import { getLivros } from "@/type/Livro";
 import { getLeitor } from "@/type/Leitores";
